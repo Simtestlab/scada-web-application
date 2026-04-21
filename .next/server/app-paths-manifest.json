@@ -1,0 +1,4 @@
+{
+  "/device/[deviceId]/page": "app/device/[deviceId]/page.js",
+  "/page": "app/page.js"
+}
