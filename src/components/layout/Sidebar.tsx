@@ -1,8 +1,10 @@
-'use client';
+ 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
+import Logo from '../../assests/logo.png';
 
 interface Props {
   devices: string[];
@@ -14,11 +16,12 @@ export default function Sidebar({ devices }: Props) {
   return (
     <aside className="hidden md:flex flex-col w-56 shrink-0 bg-surface-variant border-r border-border min-h-screen">
       {/* Logo */}
-      <Link href="/" className="flex items-center gap-2 px-5 py-4 border-b border-border hover:bg-card transition-colors">
-        <div className="w-7 h-7 rounded-lg bg-accent-blue/20 flex items-center justify-center shrink-0">
-          <svg viewBox="0 0 16 16" className="w-4 h-4 fill-accent-blue">
-            <path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1Zm0 2a5 5 0 1 1 0 10A5 5 0 0 1 8 3Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" />
-          </svg>
+      <Link
+        href="/"
+        className="flex items-center gap-2 px-5 py-4 border-b border-border hover:bg-card transition-colors"
+      >
+          <div className="w-7 h-7 rounded-lg bg-accent-blue/20 flex items-center justify-center shrink-0 overflow-hidden">
+          <Image src={Logo} alt="Adlixa logo" width={28} height={28} className="object-contain" />
         </div>
       </Link>
 

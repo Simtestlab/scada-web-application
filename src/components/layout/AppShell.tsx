@@ -1,10 +1,12 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 import Sidebar from './Sidebar';
+import Logo from '../../assests/logo.png';
 
 interface Props {
   devices: string[];
@@ -81,6 +83,11 @@ export default function AppShell({ devices, children }: Props) {
               <path d="M1 2.5h14a.5.5 0 0 1 0 1H1a.5.5 0 0 1 0-1Zm0 5h14a.5.5 0 0 1 0 1H1a.5.5 0 0 1 0-1Zm0 5h14a.5.5 0 0 1 0 1H1a.5.5 0 0 1 0-1Z" />
             </svg>
           </button>
+          <Link href="/" className="flex items-center gap-2">
+            <div className="w-7 h-7 rounded-lg overflow-hidden">
+              <Image src={Logo} alt="Adlixa logo" width={28} height={28} className="object-contain" />
+            </div>
+          </Link>
         </header>
 
         <main className="flex-1 p-4 md:p-6 lg:p-8 overflow-auto">{children}</main>

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'SCADA Monitor',
+  title: 'Adlixa',
   description: 'Solar inverter monitoring dashboard',
 };
 

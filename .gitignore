@@ -33,3 +33,4 @@ Thumbs.db
 
 # Next.js local swc binary (should not be committed)
 node_modules/**/next-swc* 
+.vercel
